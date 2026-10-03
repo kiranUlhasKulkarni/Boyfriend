@@ -1,0 +1,23 @@
+/* ───────── Level 6 — Raining Love ───────── */
+.l06-stage {
+  background: linear-gradient(#bfe0ff, #ffe0ec);
+  cursor: grab;
+}
+:root[data-theme='dark'] .l06-stage {
+  background: linear-gradient(#141233, #4a2d5e);
+}
+.l06-shaker {
+  position: absolute;
+  inset: 0;
+}
+.l06-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+.l06-lives {
+  gap: 3px;
+  padding: 6px 10px;
+}

@@ -1,0 +1,234 @@
+.finale {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  --vine: #7cc79a;
+  --leaf-1: #9ed9b0;
+  --leaf-2: #6fbf8c;
+}
+:root[data-theme='dark'] .finale {
+  --vine: #4f9a7a;
+  --leaf-1: #5fae8a;
+  --leaf-2: #3f8a6a;
+}
+.finale-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, #3a1838 0%, #12081c 70%);
+  transition: background 1.5s ease;
+}
+.finale.phase-bloom .finale-bg,
+.finale.phase-reveal .finale-bg {
+  background: radial-gradient(circle at 50% 40%, #fff2f7 0%, #ffd9e8 45%, #d6eaff 100%);
+}
+:root[data-theme='dark'] .finale.phase-bloom .finale-bg,
+:root[data-theme='dark'] .finale.phase-reveal .finale-bg {
+  background: radial-gradient(circle at 50% 40%, #4a2550 0%, #2a1a48 50%, #14213a 100%);
+}
+.finale.phase-charge {
+  animation: shake 0.12s linear infinite;
+}
+.finale.phase-boom {
+  animation: shake 0.08s linear 6;
+}
+.charge {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+.charge > div:first-child {
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 30px #ff4f8b) drop-shadow(0 0 60px #ff85b1);
+}
+.charge-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 79, 139, 0.6), transparent 70%);
+  animation: twinkle 0.5s ease-in-out infinite;
+}
+.flash {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  background: #fff;
+  pointer-events: none;
+}
+.shockwave {
+  position: absolute;
+  z-index: 29;
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  height: 200px;
+  margin: -100px 0 0 -100px;
+  border-radius: 50%;
+  border: 14px solid #ffb3cf;
+  box-shadow: 0 0 40px #ff85b1, inset 0 0 40px #96c6fb;
+  pointer-events: none;
+}
+.vines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.heart-ripples {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+.ripple-heart {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+}
+
+.finale-scroll {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  overflow-y: auto;
+  display: flex;
+  padding: 80px 16px 120px;
+}
+.finale-layout {
+  margin: auto;
+  width: min(1000px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+.finale-title {
+  text-align: center;
+  font-size: clamp(2.4rem, 7vw, 4.6rem);
+  font-weight: 700;
+  line-height: 1.05;
+  filter: drop-shadow(0 6px 0 rgba(255, 255, 255, 0.7)) drop-shadow(0 10px 30px rgba(242, 98, 154, 0.35));
+}
+:root[data-theme='dark'] .finale-title {
+  filter: drop-shadow(0 0 30px rgba(255, 156, 194, 0.5));
+}
+.finale-title span {
+  display: inline-block;
+  margin: 0 0.12em;
+}
+.finale-row {
+  display: grid;
+  grid-template-columns: minmax(240px, 360px) 1fr;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+}
+@media (max-width: 760px) {
+  .finale-row {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+/* ornate frame */
+.ornate-frame {
+  position: relative;
+  width: min(340px, 78vw);
+  padding: 22px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffe7a3, #f2b44b 30%, #ffe7a3 50%, #f2a93b 75%, #fff1c2);
+  box-shadow: 0 30px 60px -20px rgba(150, 70, 30, 0.55), inset 0 0 0 3px rgba(255, 255, 255, 0.6), inset 0 0 20px rgba(160, 90, 20, 0.35);
+}
+.frame-mat {
+  padding: 14px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #fff6fa, #ffe3ee);
+  box-shadow: inset 0 3px 10px rgba(150, 70, 110, 0.25);
+}
+.frame-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.frame-corner {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  z-index: 2;
+}
+.frame-corner-svg {
+  width: 100%;
+  height: 100%;
+}
+.frame-corner.tl {
+  top: -10px;
+  left: -10px;
+}
+.frame-corner.tr {
+  top: -10px;
+  right: -10px;
+  transform: scaleX(-1);
+}
+.frame-corner.bl {
+  bottom: -10px;
+  left: -10px;
+  transform: scaleY(-1);
+}
+.frame-corner.br {
+  bottom: -10px;
+  right: -10px;
+  transform: scale(-1, -1);
+}
+.frame-plaque {
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  translate: -50% 0;
+  padding: 4px 18px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #fff1c2, #f2b44b);
+  color: #7a4a10;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  box-shadow: 0 6px 12px rgba(150, 90, 20, 0.35);
+}
+
+.finale-letter {
+  padding: 30px clamp(20px, 4vw, 40px);
+  border-radius: 24px;
+  background: var(--surface);
+  backdrop-filter: blur(14px);
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-lg);
+}
+.finale-message {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  line-height: 1.35;
+  color: var(--ink);
+}
+.finale-sign {
+  margin: 16px 0 0;
+  text-align: right;
+  font-size: 1.8rem;
+  color: var(--accent);
+}
+.finale-couple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+}
+.finale-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

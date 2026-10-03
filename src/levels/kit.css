@@ -1,0 +1,93 @@
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 28px;
+  overflow: hidden;
+  background: var(--surface-solid);
+  box-shadow: var(--shadow-lg), inset 0 0 0 2px var(--border);
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.game-hud {
+  position: absolute;
+  z-index: 5;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  pointer-events: none;
+}
+.hud-chip {
+  --chip: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid color-mix(in srgb, var(--chip) 35%, transparent);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+.hud-chip b {
+  color: var(--chip);
+  font-size: 1.05rem;
+}
+.hud-chip-label {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+.hud-chip-icon {
+  display: grid;
+}
+.timer-bar {
+  position: relative;
+  flex: 1;
+  min-width: 120px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid var(--border);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.timer-fill {
+  position: absolute;
+  inset: 0;
+  transform-origin: left;
+  background: linear-gradient(90deg, #96c6fb, #ffb3cf);
+  transition: transform 0.1s linear;
+}
+.timer-bar.danger .timer-fill {
+  background: linear-gradient(90deg, #ff85b1, #ff5d7a);
+  animation: pulseBar 0.6s ease-in-out infinite alternate;
+}
+@keyframes pulseBar {
+  to {
+    filter: brightness(1.2);
+  }
+}
+.timer-text {
+  position: relative;
+  display: block;
+  text-align: center;
+  line-height: 19px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--ink);
+}

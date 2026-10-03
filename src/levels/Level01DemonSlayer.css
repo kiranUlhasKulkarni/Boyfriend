@@ -1,0 +1,18 @@
+.l01-stage {
+  background: linear-gradient(180deg, #7e8fda, #f8c8d8);
+}
+:root[data-theme='dark'] .l01-stage {
+  background: linear-gradient(180deg, #060a22, #2a2357);
+}
+.l01-canvas {
+  touch-action: none;
+  cursor: crosshair;
+}
+.l01-lives {
+  display: inline-flex;
+  gap: 2px;
+  align-items: center;
+}
+.l01-lives svg {
+  display: block;
+}

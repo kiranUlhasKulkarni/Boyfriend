@@ -1,0 +1,172 @@
+/* ───────── Level 04 — Corporate Escape ───────── */
+.l04-stage {
+  background: #e9f1ff;
+}
+:root[data-theme='dark'] .l04-stage {
+  background: #1b2142;
+}
+.l04-wrap {
+  position: absolute;
+  inset: 0;
+}
+.l04-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: ew-resize;
+}
+
+/* HUD */
+.l04-hud {
+  align-items: center;
+}
+.l04-stress-bar {
+  display: inline-flex;
+  gap: 3px;
+}
+.l04-stress-seg {
+  width: 16px;
+  height: 10px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--ink-faint) 40%, transparent);
+  transition: background 0.2s, transform 0.2s;
+}
+.l04-stress-seg.on {
+  background: linear-gradient(90deg, #ff85b1, #ff4d6d);
+  transform: scaleY(1.2);
+  box-shadow: 0 0 8px rgba(255, 77, 109, 0.6);
+}
+.l04-shield-chip {
+  animation: l04-pulse 0.6s ease-in-out infinite alternate;
+}
+.l04-shield-time {
+  font-family: var(--font-display);
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+@keyframes l04-pulse {
+  to {
+    box-shadow: 0 0 0 4px rgba(242, 169, 59, 0.25), 0 0 16px rgba(242, 169, 59, 0.5);
+  }
+}
+.l04-progress {
+  position: relative;
+  flex: 1 1 100%;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: visible;
+}
+.l04-progress-fill {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  transform-origin: left;
+  background: linear-gradient(90deg, #96c6fb, #c7b3ff 50%, #ffb3cf 80%, #ffc46b);
+  transition: transform 0.12s linear;
+}
+.l04-progress-runner {
+  position: absolute;
+  top: 50%;
+  translate: -50% -50%;
+  display: grid;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
+  transition: left 0.12s linear;
+  animation: l04-beat 0.8s ease-in-out infinite;
+}
+@keyframes l04-beat {
+  50% {
+    scale: 1.2;
+  }
+}
+.l04-progress-text {
+  position: relative;
+  display: block;
+  text-align: center;
+  line-height: 21px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 10px;
+}
+
+/* intro banner */
+.l04-banner {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  translate: -50% -50%;
+  z-index: 6;
+  max-width: calc(100% - 32px);
+  padding: 10px 20px;
+  border-radius: 18px;
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  border: 2px solid color-mix(in srgb, #5b7fe0 40%, transparent);
+  box-shadow: var(--shadow-md);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: center;
+  pointer-events: none;
+}
+
+/* her, at the date table */
+.l04-her {
+  position: absolute;
+  bottom: 7%;
+  height: 19.5%;
+  translate: -50% 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+.l04-her > svg {
+  height: 100%;
+  width: auto;
+  min-height: 0;
+  flex: 1 1 0;
+}
+.l04-her-bubble {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  translate: -50% 0;
+  margin-bottom: 4px;
+  padding: 5px 10px;
+  border-radius: 14px;
+  background: var(--surface-solid);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  width: max-content;
+  max-width: 130px;
+  text-align: center;
+  line-height: 1.2;
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 480px) {
+  .l04-banner {
+    font-size: 0.95rem;
+  }
+  .l04-stress-seg {
+    width: 12px;
+  }
+  .l04-progress-text {
+    font-size: 0.72rem;
+  }
+}

@@ -1,0 +1,17 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { MotionConfig } from 'framer-motion';
+import App from './App';
+import { GameProvider } from './state/GameContext';
+import './styles/global.css';
+import './components/Photo.css';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <MotionConfig reducedMotion="user">
+      <GameProvider>
+        <App />
+      </GameProvider>
+    </MotionConfig>
+  </React.StrictMode>
+);

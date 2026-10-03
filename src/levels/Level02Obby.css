@@ -1,0 +1,78 @@
+.l02-stage {
+  background: linear-gradient(180deg, #9fd6ff, #ffe1ee);
+}
+:root[data-theme='dark'] .l02-stage {
+  background: linear-gradient(180deg, #0b0e2e, #3a2a5e);
+}
+.l02-canvas {
+  touch-action: none;
+  cursor: pointer;
+}
+.l02-progress {
+  position: relative;
+  flex: 1;
+  min-width: 120px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: visible;
+}
+.l02-progress-fill {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  transform-origin: left;
+  background: linear-gradient(90deg, #b8f0c8, #4fc38a 60%, #ff9cc2);
+  transition: transform 0.15s linear;
+}
+.l02-progress-runner {
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 18px;
+  margin-top: -9px;
+  border-radius: 5px;
+  background: #f6cf3a;
+  border: 2px solid #d9ab17;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: left 0.15s linear;
+}
+.l02-progress-runner::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  bottom: 3px;
+  height: 4px;
+  border: 1.5px solid #1b1b1b;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+}
+.l02-progress-goal {
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  filter: drop-shadow(0 0 4px rgba(255, 111, 159, 0.7));
+}
+.l02-tries {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+.l02-tries i {
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+  background: var(--ink-faint);
+  opacity: 0.5;
+}
+.l02-tries i.on {
+  background: #4fc38a;
+  opacity: 1;
+  box-shadow: 0 0 6px rgba(79, 195, 138, 0.7);
+}

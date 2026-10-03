@@ -1,0 +1,38 @@
+photo01.jpg <- WhatsApp Image 2026-10-02 at 23.36.17 (1).jpeg
+photo02.jpg <- WhatsApp Image 2026-10-02 at 23.36.17.jpeg
+photo03.jpg <- WhatsApp Image 2026-10-02 at 23.36.54.jpeg
+photo04.jpg <- WhatsApp Image 2026-10-02 at 23.37.12.jpeg
+photo05.jpg <- WhatsApp Image 2026-10-02 at 23.40.26.jpeg
+photo06.jpg <- WhatsApp Image 2026-10-02 at 23.42.43.jpeg
+photo07.jpg <- WhatsApp Image 2026-10-02 at 23.42.44 (1).jpeg
+photo08.jpg <- WhatsApp Image 2026-10-02 at 23.42.44 (2).jpeg
+photo09.jpg <- WhatsApp Image 2026-10-02 at 23.42.44.jpeg
+photo10.jpg <- WhatsApp Image 2026-10-02 at 23.42.45 (1).jpeg
+photo11.jpg <- WhatsApp Image 2026-10-02 at 23.42.45 (2).jpeg
+photo12.jpg <- WhatsApp Image 2026-10-02 at 23.42.45 (3).jpeg
+photo13.jpg <- WhatsApp Image 2026-10-02 at 23.42.45 (4).jpeg
+photo14.jpg <- WhatsApp Image 2026-10-02 at 23.42.45.jpeg
+photo15.jpg <- WhatsApp Image 2026-10-02 at 23.42.46.jpeg
+photo16.jpg <- WhatsApp Image 2026-10-02 at 23.43.45 (1).jpeg
+photo17.jpg <- WhatsApp Image 2026-10-02 at 23.43.45.jpeg
+photo18.jpg <- WhatsApp Image 2026-10-02 at 23.43.46 (1).jpeg
+photo19.jpg <- WhatsApp Image 2026-10-02 at 23.43.46.jpeg
+photo20.jpg <- WhatsApp Image 2026-10-02 at 23.43.47 (1).jpeg
+photo21.jpg <- WhatsApp Image 2026-10-02 at 23.43.47 (2).jpeg
+photo22.jpg <- WhatsApp Image 2026-10-02 at 23.43.47 (3).jpeg
+photo23.jpg <- WhatsApp Image 2026-10-02 at 23.43.47.jpeg
+photo24.jpg <- WhatsApp Image 2026-10-02 at 23.45.00 (1).jpeg
+photo25.jpg <- WhatsApp Image 2026-10-02 at 23.45.00 (2).jpeg
+photo26.jpg <- WhatsApp Image 2026-10-02 at 23.45.00 (3).jpeg
+photo27.jpg <- WhatsApp Image 2026-10-02 at 23.45.00.jpeg
+photo28.jpg <- WhatsApp Image 2026-10-02 at 23.45.01 (1).jpeg
+photo29.jpg <- WhatsApp Image 2026-10-02 at 23.45.01 (2).jpeg
+photo30.jpg <- WhatsApp Image 2026-10-02 at 23.45.01 (3).jpeg
+photo31.jpg <- WhatsApp Image 2026-10-02 at 23.45.01 (4).jpeg
+photo32.jpg <- WhatsApp Image 2026-10-02 at 23.45.01.jpeg
+photo33.jpg <- WhatsApp Image 2026-10-02 at 23.45.02 (1).jpeg
+photo34.jpg <- WhatsApp Image 2026-10-02 at 23.45.02 (2).jpeg
+photo35.jpg <- WhatsApp Image 2026-10-02 at 23.45.02 (3).jpeg
+photo36.jpg <- WhatsApp Image 2026-10-02 at 23.45.02.jpeg
+photo37.jpg <- WhatsApp Image 2026-10-02 at 23.45.03 (1).jpeg
+photo38.jpg <- WhatsApp Image 2026-10-02 at 23.45.03.jpeg

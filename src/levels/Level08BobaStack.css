@@ -1,0 +1,38 @@
+.l08-stage {
+  cursor: pointer;
+  background: linear-gradient(#fff1ea, #fde0ea);
+}
+:root[data-theme='dark'] .l08-stage {
+  background: linear-gradient(#231a3a, #2e2048);
+}
+.l08-canvas {
+  position: absolute;
+  inset: 0;
+}
+.l08-hint {
+  position: absolute;
+  left: 50%;
+  top: 64px;
+  transform: translateX(-50%);
+  z-index: 4;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--surface);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-sm);
+  border: 1.5px solid var(--border);
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+  pointer-events: none;
+  animation: l08-bob 1.2s ease-in-out infinite alternate;
+}
+@keyframes l08-bob {
+  from {
+    transform: translate(-50%, 0) scale(1);
+  }
+  to {
+    transform: translate(-50%, -6px) scale(1.04);
+  }
+}
